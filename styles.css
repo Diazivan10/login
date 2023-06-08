@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1609743298373-66d0ef55319a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  animation: backgroundAnimation 20s infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% { background-position: center center; }
+  50% { background-position: top right; }
+  100% { background-position: center center; }
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.options {
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.options p {
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.options a {
+  color: #4CAF50;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.options a:hover {
+  color: #45a049;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 600px)  {
+  body {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+  
+  form {
+    max-width: 100%;
+    padding: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"] {
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+}
